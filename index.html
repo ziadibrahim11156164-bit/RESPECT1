@@ -1,0 +1,132 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Ｒｅｓｐｅｃｔ — Free Fire Clan</title>
+<style>
+:root{--bg:#07070a;--p:#13131a;--g:rgba(255,255,255,.05);--bd:rgba(255,255,255,.1);--t:#fff;--m:#9aa0ad;--r:#e11d2e;--glow:0 0 22px rgba(225,29,46,.55);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme=light]{--bg:#f4f4f7;--p:#fff;--g:rgba(0,0,0,.04);--bd:rgba(0,0,0,.12);--t:#111;--m:#555}
+*{box-sizing:border-box}html{height:100%;scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--t);font-family:Tajawal,system-ui,Segoe UI,sans-serif;min-height:100%;overflow-x:hidden}
+#bg{position:fixed;inset:0;z-index:0;pointer-events:none}
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:var(--bgimg,none) center/cover no-repeat;opacity:.3}
+.glow{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(60% 40% at 50% 0,rgba(225,29,46,.28),transparent 70%)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;align-items:center;gap:10px;padding:10px 16px;background:color-mix(in srgb,var(--bg) 70%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--bd)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:19;background:var(--bg)}
+.logo{font-weight:900;font-size:20px;color:var(--r);text-shadow:var(--glow);display:flex;align-items:center;gap:8px;cursor:pointer}.logo img{height:30px;border-radius:6px}
+.links{display:flex;gap:4px;margin-inline-start:auto;align-items:center}.links a,.ib{color:var(--t);text-decoration:none;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:14px;background:none;border:0}
+.links a:hover,.ib:hover{background:var(--g);color:var(--r)}
+.btn{display:inline-block;background:linear-gradient(180deg,#ff3347,#b8101f);color:#fff;border:0;border-radius:10px;padding:12px 22px;font-weight:800;cursor:pointer;box-shadow:var(--glow),0 5px 0 #7a0a14;transition:.15s;font-size:15px;text-decoration:none;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}.btn:active{transform:translateY(3px);box-shadow:var(--glow),0 1px 0 #7a0a14}.btn.s{background:var(--g);box-shadow:none;border:1px solid var(--bd);color:var(--t)}.btn.sm{padding:6px 12px;font-size:13px;box-shadow:none}
+#burger{display:none}
+@media(max-width:820px){#burger{display:block}.links{position:fixed;inset:60px 0 auto 0;flex-direction:column;background:var(--p);padding:12px;display:none;border-bottom:1px solid var(--bd)}.links.o{display:flex}.links a{width:100%}}
+main{position:relative;z-index:1;max-width:1100px;margin:auto;padding:0 16px 40px}
+section{padding:56px 0}h2{font-size:clamp(24px,5vw,36px);margin:0 0 24px;position:relative;display:inline-block}h2::after{content:"";display:block;height:3px;width:60%;background:var(--r);box-shadow:var(--glow);margin-top:6px}
+.hero{min-height:82vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:14px}
+.hero h1{white-space:nowrap;display:inline-block;max-width:100%;}.hero h1{font-size:clamp(48px,14vw,120px);margin:0;color:var(--r);text-shadow:var(--glow),0 0 70px rgba(225,29,46,.6);animation:fl 4s ease-in-out infinite;line-height:1}
+@keyframes fl{50%{transform:translateY(-10px) rotateX(8deg)}}.hero h3{letter-spacing:.4em;margin:0;font-size:clamp(14px,3vw,22px)}.hero p{max-width:600px;color:var(--m);font-size:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:var(--g);border:1px solid var(--bd);border-radius:16px;padding:20px;backdrop-filter:blur(10px);transition:transform .2s,box-shadow .2s,border-color .2s;transform-style:preserve-3d;position:relative}
+.card:hover{border-color:var(--r);box-shadow:var(--glow)}.card img.av{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;margin-bottom:12px}
+.rank{color:var(--r);font-weight:800;font-size:13px;text-transform:uppercase}.num{font-size:38px;font-weight:900;color:var(--r)}
+.ic{font-size:34px}label{display:block;margin:12px 0 4px;color:var(--m);font-size:14px}
+input,textarea,select{width:100%;background:var(--p);color:var(--t);border:1px solid var(--bd);border-radius:10px;padding:11px;font:inherit}input:focus,textarea:focus{outline:0;border-color:var(--r);box-shadow:var(--glow)}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:10px;text-align:start;border-bottom:1px solid var(--bd)}tr.r{cursor:pointer}tr.r:hover{background:var(--g)}
+.tag{padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700}.pending{background:#f59e0b33;color:#f59e0b}.accepted{background:#22c55e33;color:#22c55e}.rejected{background:#ef444433;color:#ef4444}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}.tabs .btn{box-shadow:none}.bar{height:8px;background:var(--bd);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--r);width:0;transition:.2s}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.ed{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-bottom:10px}.msg{padding:12px;border-radius:10px;margin:12px 0}.ok{background:#22c55e22;color:#22c55e}.er{background:#ef444422;color:#ef4444}
+video{width:100%;border-radius:12px;max-height:360px;background:#000}footer{position:relative;z-index:1;border-top:1px solid var(--bd);padding:28px 16px;text-align:center;color:var(--m)}footer .row{justify-content:center;margin:10px 0}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style></head><body><canvas id="bg"></canvas><div class="glow"></div>
+<nav id="nav"></nav><main id="app"></main><footer id="foot"></footer>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl=u=>/^(https?:\/\/|\/_blob\/|mailto:)/i.test(u||"")?u:"#";
+const L={ar:{home:"الرئيسية",about:"عن الكلان",leaders:"القيادة",rules:"الشروط",apply:"التقديم",contact:"تواصل معنا",applyNow:"قدّم للكلان",ctitle:"قيادة الكلان",rtitle:"شروط الانضمام إلى",atitle:"عن",ctitle2:"تواصل معنا",open:"فتح",empty:"لم تتم إضافة محتوى بعد.",f:["الاسم داخل اللعبة","العمر","Free Fire ID","Discord (اختياري)","WhatsApp (اختياري)","البلد","المستوى / Rank","وصف بسيط عن اللاعب"],vid:"رفع فيديو Gameplay",send:"إرسال طلب الانضمام",done:"تم إرسال طلبك بنجاح، سيتم مراجعة طلبك من إدارة Ｒｅｓｐｅｃｔ.",err:"حدث خطأ، حاول مرة أخرى.",need:"أكمل الحقول المطلوبة (الاسم، العمر، ID، البلد، Rank).",big:"الفيديو أكبر من 20MB، استخدم خانة رابط الفيديو.",login:"سجّل الدخول في claude.ai لإرسال الطلب.",upl:"جاري الرفع…",defTag:"مش مجرد كلان... دي عيلة واحدة، هدف واحد، واحترام فوق كل شيء.",defAbout:"Ｒｅｓｐｅｃｔ هو كلان Free Fire هدفه تكوين فريق قوي ومتعاون يعتمد على المهارة والاحترام والنشاط.",noauth:"هذه الصفحة للأدمن فقط."},
+en:{home:"Home",about:"About",leaders:"Leaders",rules:"Rules",apply:"Apply",contact:"Contact",applyNow:"Apply Now",ctitle:"Clan Leadership",rtitle:"Join requirements for",atitle:"About",ctitle2:"Contact Us",open:"Open",empty:"No content added yet.",f:["In-game name","Age","Free Fire ID","Discord (optional)","WhatsApp (optional)","Country","Rank / Level","Short description of the player"],vid:"Upload gameplay video",send:"Submit application",done:"Your application was sent. Ｒｅｓｐｅｃｔ staff will review it.",err:"Something went wrong, try again.",need:"Fill the required fields (name, age, ID, country, rank).",big:"Video is larger than 20MB, use the video link field.",login:"Sign in to claude.ai to submit.",upl:"Uploading…",defTag:"Not just a clan... one family, one goal, respect above all.",defAbout:"Ｒｅｓｐｅｃｔ is a Free Fire clan built on skill, respect and activity.",noauth:"Admin only."}};
+const S={lang:"ar",theme:"dark",route:"home",set:{},leaders:[],rules:[],socials:[],apps:[],admin:false,db:null,assets:null,tab:"dash",filter:"all",q:"",open:null,file:null,status:null,menu:false};
+try{
+S.lang=localStorage.getItem("lang")||"ar";
+S.theme=localStorage.getItem("theme")||"dark";
+S.set=JSON.parse(localStorage.getItem("site_settings")||"{}");
+S.leaders=JSON.parse(localStorage.getItem("site_leaders")||"[]");
+S.rules=JSON.parse(localStorage.getItem("site_rules")||"[]");
+S.socials=JSON.parse(localStorage.getItem("site_socials")||"[]");
+S.apps=JSON.parse(localStorage.getItem("site_apps")||"[]");
+}catch(e){}
+const t=k=>L[S.lang][k],pick=(o,k)=>o[k+"_"+S.lang]||o[k+"_ar"]||o[k+"_en"]||"";
+const name=()=>S.set.name||"Ｒｅｓｐｅｃｔ";
+function apply(){document.documentElement.lang=S.lang;{const u=safeUrl(S.set.bg);document.documentElement.style.setProperty("--bgimg",u!=="#"?`url("${u.replace(/["\\\n]/g,"")}")`:"none")}document.documentElement.dir=S.lang=="ar"?"rtl":"ltr";document.documentElement.dataset.theme=S.theme;if(S.set.color)document.documentElement.style.setProperty("--r",/^#[0-9a-f]{3,8}$/i.test(S.set.color)?S.set.color:"#e11d2e")}
+const sorted=a=>[...a].sort((x,y)=>(x.order||0)-(y.order||0));
+function render(){apply();const r=S.route;
+$("#nav").innerHTML=`<div class="logo" onclick="go('home')">${S.set.logo?`<img src="${esc(safeUrl(S.set.logo))}">`:""}${esc(name())}</div><button class="ib" id="burger" onclick="S.menu=!S.menu;render()">☰</button><div class="links ${S.menu?"o":""}">${[["home","home"],["about","about"],["leaders","leaders"],["rules","rules"],["apply","apply"],["contact","contact"]].map(([a,b])=>`<a onclick="go('${a}')">${t(b)}</a>`).join("")}<button class="ib" onclick="S.lang=S.lang=='ar'?'en':'ar';sv('lang',S.lang);render()">${S.lang=="ar"?"EN":"ع"}</button><button class="ib" onclick="S.theme=S.theme=='dark'?'light':'dark';sv('theme',S.theme);render()">◐</button><a class="btn sm" onclick="go('apply')" style="color:#fff">${t("applyNow")}</a></div>`;
+$("#app").innerHTML=r=="apply"?applyPg():home();
+$("#foot").innerHTML=`<div class="logo" style="justify-content:center">${esc(name())}</div><p>${esc(pick(S.set,"about").slice(0,140)||"")}</p><div class="row">${sorted(S.socials).map(s=>`<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener" style="font-size:24px;text-decoration:none">${esc(s.icon||"🔗")}</a>`).join("")}</div>© 2026 ${esc(name())} Clan. All Rights Reserved.`;
+if(r=="home")tilt();counters()}
+function sv(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function go(r){S.route=r;S.menu=false;location.hash=r;render();window.scrollTo(0,0)}
+function sec(id){setTimeout(()=>document.getElementById(id)?.scrollIntoView({behavior:"smooth"}),30)}
+function home(){return `<div class="hero"><h1>${esc(name())}</h1><h3>FREE FIRE CLAN</h3><p>${esc(pick(S.set,"tag")||t("defTag"))}</p><div class="row" style="justify-content:center"><button class="btn" onclick="go('apply')">${t("applyNow")}</button><button class="btn s" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">${t("contact")}</button></div></div>
+<section id="about"><h2>${t("atitle")} ${esc(name())}</h2><div class="card"><p style="font-size:18px;line-height:1.9;margin:0">${esc(pick(S.set,"about")||t("defAbout"))}</p></div></section>
+<section id="leaders"><h2>${t("ctitle")}</h2><div class="grid">${sorted(S.leaders).map(l=>`<div class="card tl">${l.img?`<img class="av" src="${esc(safeUrl(l.img))}">`:""}<div class="rank">${esc(l.rank)}</div><h3 style="margin:4px 0">${esc(l.name)}</h3>${l.contact?`<div style="color:var(--r)">${esc(l.contact)}</div>`:""}<p style="color:var(--m)">${esc(l.desc)}</p></div>`).join("")||`<p>${t("empty")}</p>`}</div></section>
+<section id="rules"><h2>${t("rtitle")} ${esc(name())}</h2><div class="grid">${sorted(S.rules).map((x,i)=>`<div class="card tl"><div class="num">${String(i+1).padStart(2,"0")}</div>${esc(pick(x,"text"))}</div>`).join("")||`<p>${t("empty")}</p>`}</div></section>
+<section id="contact"><h2>${t("ctitle2")}</h2><div class="grid">${sorted(S.socials).map(s=>`<div class="card tl"><div class="ic">${esc(s.icon||"🔗")}</div><h3>${esc(s.name)}</h3><p style="color:var(--m)">${esc(s.desc)}</p><a class="btn sm" target="_blank" rel="noopener" href="${esc(safeUrl(s.url))}">${t("open")}</a></div>`).join("")||`<p>${t("empty")}</p>`}</div></section>`}
+function applyPg(){const f=t("f"),k=["name","age","ffid","discord","wa","country","rank"];
+return `<section><h2>${t("apply")}</h2><div class="card">${k.map((x,i)=>`<label>${f[i]}</label><input id="f_${x}" ${x=="age"?'type="number" min="8"':""}>`).join("")}<label>${f[7]}</label><textarea id="f_desc" rows="3"></textarea><label>${t("vid")}</label><input type="file" id="f_vid" accept="video/*" onchange="pv(this)"><label>${S.lang=="ar"?"أو رابط فيديو (YouTube / Drive) للفيديوهات الطويلة":"Or a video link (YouTube / Drive) for long videos"}</label><input id="f_vlink" placeholder="https://"><video id="pv" controls hidden></video><div class="bar" id="pb" hidden><i></i></div>${S.db?"":`<div class="msg er">${t("login")}</div>`}<div id="st">${S.status||""}</div><p><button class="btn" id="sb" onclick="submitApp()">${t("send")}</button></p></div></section>`}
+function pv(i){const f=i.files[0],v=$("#pv");if(!f)return;if(f.size>20*1024*1024){$("#st").innerHTML=`<div class="msg er">${t("big")}</div>`;i.value="";return}$("#st").innerHTML="";v.src=URL.createObjectURL(f);v.hidden=false}
+async function submitApp(){const g=x=>($("#f_"+x).value||"").trim(),d={id:"a"+Date.now()+Math.random().toString(36).slice(2,6),name:g("name"),age:g("age"),ffid:g("ffid"),discord:g("discord"),wa:g("wa"),country:g("country"),rank:g("rank"),desc:g("desc"),vlink:g("vlink")},st=$("#st");
+if(!d.name||!d.age||!d.ffid||!d.country||!d.rank){st.innerHTML=`<div class="msg er">${t("need")}</div>`;return}
+$("#sb").disabled=true;
+try{
+d.status="pending";d.note="";d.created=Date.now();
+S.apps.push(d);saveData("apps",S.apps);
+const waRaw=String(S.set.whatsapp||"").replace(/[^0-9]/g,"");
+const msg=`طلب انضمام جديد إلى ${name()}%0A%0Aالاسم: ${d.name}%0Aالعمر: ${d.age}%0AFree Fire ID: ${d.ffid}%0ADiscord: ${d.discord||"غير مذكور"}%0AWhatsApp: ${d.wa||"غير مذكور"}%0Aالبلد: ${d.country}%0ARank: ${d.rank}%0Aالوصف: ${d.desc||"غير مذكور"}%0Aرابط الفيديو: ${d.vlink||"لا يوجد"}`;
+if(waRaw){window.location.href=`https://wa.me/${waRaw}?text=${msg}`;return}
+S.status=`<div class="msg ok">${t("done")}</div>`;render();S.status=null
+}catch(e){st.innerHTML=`<div class="msg er">${t("err")}</div>`;$("#sb").disabled=false}}
+function admin(){if(!S.admin)return `<section><div class="msg er">${t("noauth")}</div></section>`;
+const tabs=[["dash","Dashboard"],["apps","طلبات الانضمام"],["leaders","أعضاء القيادة"],["rules","شروط الانضمام"],["socials","وسائل التواصل"],["set","إعدادات الموقع"]];
+let b="";const A=S.apps,c=s=>A.filter(a=>a.status==s).length;
+if(S.tab=="dash")b=`<div class="grid">${[["TOTAL APPLICATIONS",A.length],["PENDING",c("pending")],["ACCEPTED",c("accepted")],["REJECTED",c("rejected")],["TOTAL LEADERS",S.leaders.length],["TOTAL SOCIAL LINKS",S.socials.length]].map(([a,n])=>`<div class="card tl"><div style="color:var(--m);font-size:13px">${a}</div><div class="num" data-n="${n}">0</div></div>`).join("")}</div>`;
+else if(S.tab=="apps")b=appsTab();
+else if(S.tab=="set")b=setTab();
+else b=listEd(S.tab);
+return `<section><h2>Admin</h2><div class="tabs">${tabs.map(([k,v])=>`<button class="btn ${S.tab==k?"":"s"} sm" onclick="S.tab='${k}';S.open=null;render()">${v}</button>`).join("")}</div>${b}</section>`}
+const CFG={leaders:[["name","الاسم"],["rank","الرتبة"],["contact","ID / رقم"],["desc","وصف"],["img","صورة",1]],rules:[["text_ar","الشرط (عربي)"],["text_en","Rule (English)"]],socials:[["name","المنصة"],["url","الرابط"],["icon","أيقونة (إيموجي)"],["desc","وصف"]]};
+function listEd(k){const rows=sorted(S[k]);return `<div class="card">${rows.map((r,i)=>`<div class="ed">${CFG[k].map(([f,l,im])=>im?`<div>${r[f]?`<img src="${esc(safeUrl(r[f]))}" style="height:40px;border-radius:6px">`:""}<input type="file" accept="image/*" onchange="upImg('${k}','${r.id}','${f}',this)"></div>`:`<input value="${esc(r[f])}" placeholder="${l}" onchange="upd('${k}','${r.id}','${f}',this.value)">`).join("")}<div class="row"><button class="btn sm s" onclick="mv('${k}',${i},-1)">↑</button><button class="btn sm s" onclick="mv('${k}',${i},1)">↓</button><button class="btn sm" onclick="del('${k}','${r.id}')">🗑</button></div></div>`).join("")}<button class="btn" onclick="add('${k}')">+ إضافة</button></div>`}
+function setTab(){const F=[["name","اسم الكلان"],["color","اللون الرئيسي (#e11d2e)"],["whatsapp","رقم واتساب استقبال طلبات الانضمام (مثال: 2010XXXXXXXX)"],["tag_ar","جملة Hero (عربي)"],["tag_en","Hero tagline (EN)"],["about_ar","نبذة (عربي)"],["about_en","About (EN)"]];return `<div class="card">${F.map(([f,l])=>`<label>${l}</label><input value="${esc(S.set[f])}" onchange="setv('${f}',this.value)">`).join("")}<label>صورة الخلفية (Background)</label><div class="row">${S.set.bg?`<img src="${esc(safeUrl(S.set.bg))}" style="height:44px;border-radius:6px"><button class="btn sm s" onclick="setv('bg','')">Remove</button>`:""}<input type="file" accept="image/*" onchange="upImg('settings','site','bg',this)"></div><label>Logo</label>${S.set.logo?`<img src="${esc(safeUrl(S.set.logo))}" style="height:44px">`:""}<input type="file" accept="image/*" onchange="upImg('settings','site','logo',this)"></div>`}
+function appsTab(){let A=sorted(S.apps).sort((a,b)=>b.created-a.created).filter(a=>(S.filter=="all"||a.status==S.filter)&&(!S.q||(a.name+a.ffid).toLowerCase().includes(S.q.toLowerCase())));
+const o=S.apps.find(a=>a.id==S.open);
+return `<div class="row"><input placeholder="Search name / ID" value="${esc(S.q)}" style="max-width:260px" onchange="S.q=this.value;render()">${["all","pending","accepted","rejected"].map(f=>`<button class="btn sm ${S.filter==f?"":"s"}" onclick="S.filter='${f}';render()">${f}</button>`).join("")}</div><div style="overflow-x:auto;margin-top:12px"><table><tr><th>Player</th><th>Free Fire ID</th><th>Age</th><th>Rank</th><th>Date</th><th>Status</th><th></th></tr>${A.map(a=>`<tr class="r" onclick="S.open='${a.id}';render()"><td>${esc(a.name)}</td><td>${esc(a.ffid)}</td><td>${esc(a.age)}</td><td>${esc(a.rank)}</td><td>${new Date(a.created).toLocaleString()}</td><td><span class="tag ${esc(a.status)}">${esc(a.status)}</span></td><td>👁</td></tr>`).join("")}</table></div>${o?`<div class="card" style="margin-top:16px"><h3>Player Details</h3><p>${["name","age","ffid","discord","wa","country","rank","desc"].map(k=>`<b>${k}:</b> ${esc(o[k])}`).join("<br>")}</p>${o.video?`<video controls src="${esc(safeUrl(o.video))}"></video>`:""}${o.vlink?`<p><a href="${esc(safeUrl(o.vlink))}" target="_blank" rel="noopener">🔗 ${esc(o.vlink)}</a></p>`:""}<label>Note</label><textarea rows="2" onchange="upd('applications','${o.id}','note',this.value)">${esc(o.note)}</textarea><div class="row" style="margin-top:12px"><button class="btn sm" onclick="upd('applications','${o.id}','status','accepted')">Accept</button><button class="btn sm s" onclick="upd('applications','${o.id}','status','rejected')">Reject</button><button class="btn sm s" onclick="delApp('${o.id}')">Delete</button></div></div>`:""}`}
+function saveData(k,v){try{localStorage.setItem("site_"+(k==="settings"?"settings":k),JSON.stringify(v))}catch(e){console.warn(e)}}
+function arrFor(k){return k==="settings"?S.set:S[k]||[]}
+function upd(k,id,f,v){
+const a=arrFor(k);
+if(k==="applications"){const r=a.find(x=>x.id===id);if(r){r[f]=v;saveData("apps",S.apps);render()}}
+else {const r=a.find(x=>x.id===id);if(r){r[f]=v;saveData(k,a);render()}}
+}
+function setv(f,v){S.set[f]=v;saveData("settings",S.set);render()}
+async function add(k){const r=S[k]||[];const obj={id:"i"+Date.now(),order:r.length?Math.max(...r.map(x=>x.order||0))+1:1};
+(CFG[k]||[]).filter(c=>!c[2]).forEach(c=>obj[c[0]]="");
+r.push(obj);S[k]=r;saveData(k,r);render()}
+function del(k,id){if(confirm("Delete?")){S[k]=(S[k]||[]).filter(x=>x.id!==id);saveData(k,S[k]);render()}}
+function delApp(id){if(confirm("Delete?")){S.apps=S.apps.filter(x=>x.id!==id);S.open=null;saveData("apps",S.apps);render()}}
+async function mv(k,i,d){const r=sorted(S[k]||[]),j=i+d;if(j<0||j>=r.length)return;const a=r[i],b=r[j];const ao=a.order,bo=b.order;a.order=bo;b.order=ao;S[k]=r;saveData(k,r);render()}
+async function upImg(k,id,f,inp){
+const file=inp.files[0];if(!file)return;
+if(file.size>2*1024*1024){alert("الصورة أكبر من 2MB");inp.value="";return}
+const reader=new FileReader();
+reader.onload=()=>{if(k==="settings"){S.set[f]=reader.result;saveData("settings",S.set)}
+else {const r=(S[k]||[]).find(x=>x.id===id);if(r){r[f]=reader.result;saveData(k,S[k])}}
+render()};
+reader.readAsDataURL(file)
+}
+function counters(){document.querySelectorAll("[data-n]").forEach(e=>{const n=+e.dataset.n;let i=0;const s=Math.max(1,Math.ceil(n/25));const iv=setInterval(()=>{i=Math.min(n,i+s);e.textContent=i;if(i>=n)clearInterval(iv)},30)})}
+function tilt(){document.querySelectorAll(".tl").forEach(c=>{c.onmousemove=e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(700px) rotateY(${x*14}deg) rotateX(${-y*14}deg) translateZ(8px)`};c.onmouseleave=()=>c.style.transform=""})}
+(function(){const cv=$("#bg"),x=cv.getContext("2d");let W,H,P=[];const n=innerWidth<700?28:60;function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight}rs();addEventListener("resize",rs);for(let i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,z:Math.random()*2+.4,v:Math.random()*.5+.15});
+(function f(){x.clearRect(0,0,W,H);for(const p of P){p.y-=p.v*p.z;if(p.y<0){p.y=H;p.x=Math.random()*W}x.fillStyle="rgba(225,29,46,"+(.25+p.z*.2)+")";x.shadowColor="#e11d2e";x.shadowBlur=8;x.beginPath();x.arc(p.x,p.y,p.z*1.3,0,7);x.fill()}requestAnimationFrame(f)})()})();
+function watch(k,key){S.db.collection(k).onSnapshot(s=>{S[key]=s.docs.map(d=>({id:d.id,...d.data()}));if(!(S.route=="apply"))render()},()=>{})}
+addEventListener("hashchange",()=>{const h=location.hash.slice(1);if(["home","apply"].includes(h)&&h!=S.route){S.route=h;render()}});
+const h0=location.hash.slice(1);if(["apply"].includes(h0))S.route=h0;else S.route="home";render();
+S.admin=true;
+S.db=true;
+S.assets=null;
+render();
+</script></body></html>
